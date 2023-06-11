@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B6C5FB"
+    tools:context=".ui.ReminderActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="#6D9BDA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageButton
+        android:id="@+id/Backbutton_home"
+        android:onClick="backbutton_reminder"
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="TODO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_1" />
+
+    <ImageButton
+        android:id="@+id/Dot_button"
+        android:layout_width="38dp"
+        android:layout_height="55dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_more__1__1" />
+
+    <Button
+        android:id="@+id/SetReminder_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#6D9BDA"
+        android:backgroundTint="#6D9BDA"
+        android:text="@string/setreminder"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        app:layout_constraintVertical_bias="0.76" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#0D2786"
+        android:scrollbarThumbHorizontal="@drawable/ic_home_6"
+        app:itemIconTint="#477BCA"
+        app:itemTextColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="330dp"
+        android:layout_height="410dp"
+        android:background="#1D3CAF"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/SetReminder_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        app:layout_constraintVertical_bias="0.19">
+
+        <TextView
+            android:id="@+id/TaskName_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="20sp"
+            android:backgroundTint="#FFFFFF"
+            android:text="Task Name"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/TaskName_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginRight="15sp"
+            android:background="#B9FFFFFF"
+            android:ems="10"
+            android:hint="Enter Task Name"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/TaskTime_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="20sp"
+            android:text="Task Time"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/TaskTime_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginRight="15sp"
+            android:background="#B9FFFFFF"
+            android:ems="10"
+            android:hint="Enter Task Time"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/TaskDescription_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="20sp"
+            android:text="Task Discription"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/TaskDescription_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="91dp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginRight="15sp"
+            android:background="#B9FFFFFF"
+            android:ems="10"
+            android:hint="Enter Task Description "
+            android:inputType="textMultiLine|textPersonName" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

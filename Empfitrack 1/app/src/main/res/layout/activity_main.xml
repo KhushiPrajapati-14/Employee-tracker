@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D2786"
+    android:textAlignment="center">
+
+    <ImageView
+        android:id="@+id/Ellipse_2"
+        android:layout_width="180dp"
+        android:layout_height="224dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_ellipse_2" />
+
+    <ImageView
+        android:id="@+id/Ellipse_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_ellipse_1" />
+
+    <TextView
+        android:id="@+id/Welcome_To_Empfitrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/welcome_to_empfitrack"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="291dp"
+        android:backgroundTint="#B6C5FB"
+        android:orientation="vertical"
+        android:scaleX="1.1"
+        android:scaleY="1.1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.717">
+
+        <TextView
+            android:id="@+id/Username_textview"
+            android:layout_width="145dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="30dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/EMPLOYEEID"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/Username"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints=""
+            android:background="#B6C5FB"
+            android:backgroundTint="#B6C5FB"
+            android:hint="Enter Your ID"
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Username_textview" />
+
+        <TextView
+            android:id="@+id/Password_texview"
+            android:layout_width="145dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="none"
+            android:text="@string/password"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Username" />
+
+        <ImageView
+            android:id="@+id/Username_image"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:src="@drawable/ic_username"
+            app:layout_constraintBottom_toBottomOf="@+id/Username_textview"
+            app:layout_constraintStart_toEndOf="@+id/Username_textview"
+            app:layout_constraintTop_toTopOf="@+id/Username_textview"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_username" />
+
+        <ImageView
+            android:id="@+id/Password_image"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:src="@drawable/ic_pasword"
+            app:layout_constraintBottom_toBottomOf="@+id/Password_texview"
+            app:layout_constraintStart_toEndOf="@+id/Password_texview"
+            app:layout_constraintTop_toTopOf="@+id/Password_texview"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_pasword" />
+
+        <TextView
+            android:id="@+id/Rememberme_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/remember_me"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/checkBox"
+            app:layout_constraintTop_toBottomOf="@+id/Password" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="17dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="#B6C5FB"
+            android:backgroundTint="#B6C5FB"
+            android:text="@string/checkbox"
+            app:layout_constraintEnd_toStartOf="@+id/Rememberme_text"
+            app:layout_constraintStart_toStartOf="@+id/Password"
+            app:layout_constraintTop_toTopOf="@+id/Rememberme_text" />
+
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:background="#B6C5FB"
+            android:ems="10"
+            android:hint="Enter Your Password"
+            android:inputType="textPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Password_texview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/Login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#B6C5FB"
+        android:text="@string/login"
+        android:textAlignment="center"
+        android:textColor="#0D2786"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/Main_Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/khushi"
+        app:layout_constraintBottom_toBottomOf="@+id/Ellipse_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toStartOf="@+id/Ellipse_1"
+        app:layout_constraintTop_toBottomOf="@+id/Welcome_To_Empfitrack" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

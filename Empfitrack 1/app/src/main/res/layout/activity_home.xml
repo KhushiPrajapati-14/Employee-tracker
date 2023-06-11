@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/container"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#B6C5FB"
+    tools:context=".ui.HomeActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="58dp"
+    android:background="#6D9BDA"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageButton
+
+    android:id="@+id/Backbutton_home"
+    android:layout_width="60dp"
+    android:layout_height="55dp"
+    android:background="@android:color/transparent"
+    android:contentDescription="TODO"
+        android:onClick="backbutton_home"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/ic_back_1" />
+
+<ImageButton
+    android:id="@+id/Dot_button"
+    android:layout_width="38dp"
+    android:layout_height="55dp"
+    android:background="@android:color/transparent"
+    android:backgroundTint="#FFFFFF"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/ic_more__1__1" />
+
+    <TextView
+        android:id="@+id/Timer_textview"
+        android:layout_width="167dp"
+        android:layout_height="51dp"
+        android:background="#0D2786"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="13dp"
+        android:text="TASK LIST"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#0D2786"
+        android:scrollbarThumbHorizontal="@drawable/ic_home_6"
+        app:itemIconTint="#477BCA"
+        app:itemTextColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu"/>
+
+    <Button
+        android:id="@+id/Task1_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:onClick="task"
+        android:padding="17dp"
+        android:text="Task 1"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/Task2_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.879"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Timer_textview"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/Task3_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="task"
+        android:padding="17dp"
+        android:text="Task 3"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/Task4_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.879"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Task2_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="task"
+        android:padding="17dp"
+        android:text="Task 2"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/Task3_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.879"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Task4_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:onClick="task"
+        android:padding="17dp"
+        android:text="Task 4"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.879"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Task1_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:text="Task1Details"
+        android:textColor="#0D2786"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Task1_button"
+        app:layout_constraintEnd_toStartOf="@+id/Task1_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Task1_button"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/Task2_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:text="Task2Details"
+        android:textColor="#0D2786"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Task2_button"
+        app:layout_constraintEnd_toStartOf="@+id/Task2_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Task2_button" />
+
+    <TextView
+        android:id="@+id/Task3_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:text="Task3Details"
+        android:textColor="#0D2786"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Task3_button"
+        app:layout_constraintEnd_toStartOf="@+id/Task3_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Task3_button" />
+
+    <TextView
+        android:id="@+id/Task4_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:text="Task4Details"
+        android:textColor="#0D2786"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Task4_button"
+        app:layout_constraintEnd_toStartOf="@+id/Task4_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Task4_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B6C5FB"
+    tools:context=".ui.Timer">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="#6D9BDA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/Backbutton_home"
+        android:onClick="backbutton_timer"
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="TODO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_1" />
+
+    <ImageButton
+        android:id="@+id/Dot_button"
+        android:layout_width="38dp"
+        android:layout_height="55dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_more__1__1" />
+
+    <TextView
+        android:id="@+id/Timer_textview"
+        android:layout_width="167dp"
+        android:layout_height="51dp"
+        android:background="#0D2786"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="13dp"
+        android:text="TIMER"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <TextView
+        android:id="@+id/timerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="00 : 00 : 00"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Timer_textview" />
+
+    <Button
+        android:id="@+id/Button_reset"
+        android:layout_width="167dp"
+        android:layout_height="80dp"
+        android:backgroundTint="#D64747"
+        android:onClick="resetTapped"
+        android:text="RESET"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerText" />
+
+    <Button
+        android:id="@+id/Button_startstop"
+        android:layout_width="167dp"
+        android:layout_height="80dp"
+        android:backgroundTint="#6D9BDA"
+        android:onClick="startStopTapped"
+        android:text="START"
+        android:textColor="@color/blue"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/timerText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Timer_textview" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
